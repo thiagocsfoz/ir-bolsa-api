@@ -1,7 +1,5 @@
 /users:
   post:
-    security:
-      - Bearer: []
     tags:
       - "Users"
     summary: "Insert new user"
