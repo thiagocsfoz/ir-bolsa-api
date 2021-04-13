@@ -1,0 +1,40 @@
+definitions:
+  TransactionMonth:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      month:
+        type: "integer"
+      year:
+        type: "integer"
+      impaired_injury:
+        type: "number"
+      result:
+        type: "number"
+      impaired_injury_next_month:
+        type: "number"
+      impaired_irrf:
+        type: "number"
+      irrf:
+        type: "number"
+      irrf_next_month:
+        type: "number"
+      value_darf:
+        type: "number"
+      darf_less_ten:
+        type: "number"
+      user_id:
+        type: "integer"
+    required:
+      - "type"
+      - "quantity"
+      - "date"
+      - "brokerage"
+      - "iss"
+      - "tax_bmf"
+      - "tax_register_bmf"
+      - "other_expenditure"
+      - "irrf"
+      - "adjustment"
+      - "result"

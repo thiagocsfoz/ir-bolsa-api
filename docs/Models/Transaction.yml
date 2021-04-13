@@ -1,0 +1,44 @@
+definitions:
+  Transaction:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      type:
+        type: "string"
+      quantity:
+        type: "integer"
+      date:
+        type: "date"
+        pattern: "/([0-9]{4})-(?:[0-9]{2})-([0-9]{2})/"
+        example: "yyyy-MM-dd"
+      brokerage:
+        type: "number"
+      iss:
+        type: "number"
+      tax_bmf:
+        type: "number"
+      tax_register_bmf:
+        type: "number"
+      other_expenditure:
+        type: "number"
+      irrf:
+        type: "number"
+      adjustment:
+        type: "number"
+      result:
+        type: "number"
+      user_id:
+        type: integer
+    required:
+      - "type"
+      - "quantity"
+      - "date"
+      - "brokerage"
+      - "iss"
+      - "tax_bmf"
+      - "tax_register_bmf"
+      - "other_expenditure"
+      - "irrf"
+      - "adjustment"
+      - "result"

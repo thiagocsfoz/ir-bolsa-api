@@ -14,8 +14,24 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+
+
+Route.group(() => {
+  //TRANSACTIONS
+  Route.post('/transactions', 'TransactionController.store')
+    .middleware('auth');
+  Route.post('/transactions/list-by-filters', 'TransactionController.listByFilters')
+    .middleware('auth');
+
+  Route.post('/transactions/get-transaction-month-by-filters', 'TransactionController.getTransactionMonthByFilters')
+    .middleware('auth');
+
+  Route.post('/login', 'SessionController.create');
+  Route.post('/users', 'UserController.create');
+}).prefix('api/v1');
+
+
+
+
