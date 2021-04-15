@@ -1,28 +1,11 @@
-# Adonis API application
+# API para gerar valor do DARF
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+Api para gerar o valor de IR a pagar de DARF em operações day-trade na bolsa de valores de mini contrato dolar e indice.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+1. NodeJS
+2. AdonisJS
+3. PotsgreSQL
 
-## Setup
+## Teste API
 
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+[https://ir-bolsa-api.herokuapp.com/docs/](https://ir-bolsa-api.herokuapp.com/docs/)
